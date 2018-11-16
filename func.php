@@ -28,7 +28,7 @@
 
   function Get_Weather()
   {
-    $API_KEY = "d291e28861787d49928e89aa47fa065b";
+    $API_KEY = "XXXXXXX";
     @list(,$city,) = explode("," , Get_Location());
     $q = "https://api.openweathermap.org/data/2.5/weather?q=". $city ."&appid=" . $API_KEY;
     $query =  file_get_contents($q);
@@ -57,8 +57,8 @@
   {
     $tmp = Get_Weather();
     list($main,$desc) = explode("," , $tmp);
-    echo '<p class="lead">Your country : ' . $main . '</p>';
-    echo '<p class="lead">Your city : ' . $desc . '</p>';
+    echo '<p class="lead">Weather status : ' . $main . '</p>';
+    echo '<p class="lead">Description : ' . $desc . '</p>';
 
   }
 ?>
