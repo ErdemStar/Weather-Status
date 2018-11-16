@@ -1,5 +1,5 @@
 <?php require('func.php'); ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -19,10 +19,16 @@
         <?php Say(); ?>
         <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
         <hr class="m-y-md">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-        </p>
+        <div class="row">
+          <div class="col-md-6">
+              <?php Write_Location_Info(); ?>
+          </div>
+          <div class="col-md-6 ayrac">
+              <?php Write_Weather_Status(); ?>
+          </div>
+        </div>
+
+
       </div>
 
     </div>
